@@ -33,3 +33,4 @@ EXPOSE 80
 
 # Start Nginx
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+#bye
