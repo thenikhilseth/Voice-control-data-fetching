@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest #Build job run on latest version of lates
+    runs-on: ubuntu-latest #Build job run on latest version of latest
     steps:
       - name: Checkout Source #checkout source code
         uses: actions/checkout@v3
