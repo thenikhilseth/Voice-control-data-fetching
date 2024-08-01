@@ -1,7 +1,7 @@
 // MicrophonePage.js
 import React, { useState } from "react";
 import { Button, Typography, Box } from "@mui/material";
-import DatatonicBanner from "../assets/DatatonicBanner.png";
+import DatatonicBanner from "../assets/air_canada.png";
 import { useNavigate } from "react-router-dom";
 
 const MicrophonePage = ({ setShowBooks }) => {
