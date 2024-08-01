@@ -1,5 +1,4 @@
 # Step 1: Build React App
-# Step 1: Build React App
 FROM node:20-alpine as build
 
 # Set the working directory inside the container
@@ -11,11 +10,11 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm install
 
-# Ensure tsc has execution permissions
-RUN chmod +x ./node_modules/.bin/tsc
-
 # Copy the rest of the application code to the working directory
 COPY . .
+
+# Ensure TypeScript has the correct permissions
+RUN chmod +x ./node_modules/.bin/tsc
 
 # Build the application
 RUN npm run build
