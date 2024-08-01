@@ -11,6 +11,9 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm install
 
+# Ensure tsc has execution permissions
+RUN chmod +x ./node_modules/.bin/tsc
+
 # Copy the rest of the application code to the working directory
 COPY . .
 
