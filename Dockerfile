@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Ensure TypeScript has the correct permissions
-RUN chmod +x ./node_modules/.bin/tsc
+RUN chmod +x ./node_modules/.bin/vite
 
 # Build the application
 RUN npm run build
