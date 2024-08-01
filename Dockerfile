@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Ensure TypeScript has the correct permissions
-RUN chmod +x ./node_modules/.bin/vite
+RUN chmod +x node_modules/.bin/tsc && chmod +x node_modules/.bin/vite
 
 # Build the application
 RUN npm run build
@@ -29,7 +29,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 3000
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
